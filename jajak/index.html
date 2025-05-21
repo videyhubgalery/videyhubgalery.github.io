@@ -1,32 +1,116 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>dddddd</title>
-<style>
-html,body{margin:0;padding:0;background:#000;font-family:Arial,sans-serif;text-align:center}
-.video-container{width:100vw;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
-video{max-width:100vw;max-height:100vh;width:auto;height:auto;object-fit:contain;background:#000}
-@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 rgba(230,0,0,.4)}50%{transform:scale(1.05);box-shadow:0 0 12px rgba(230,0,0,.6)}100%{transform:scale(1);box-shadow:0 0 0 rgba(230,0,0,.4)}}
-.watch-button{margin-top:12px;padding:12px 24px;font-size:16px;color:#fff;background:#e60000;text-decoration:none;border-radius:6px;font-weight:bold;animation:pulse 1.8s infinite;transition:all .3s ease}
-.watch-button:hover{box-shadow:0 0 16px rgba(255,0,0,.8);transform:scale(1.08)}
-.ad-space{width:300px;height:50px;margin:16px auto 20px;background:#ddd;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:14px;color:#555}
-.top-ad{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:9999;width:300px;height:250px;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden}
-.top-ad iframe,.top-ad div{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;box-sizing:border-box}
-.close-ad{position:absolute;top:-10px;right:-10px;background:#e60000;color:#fff;border:none;border-radius:50%;width:26px;height:26px;font-size:16px;font-weight:bold;cursor:pointer;z-index:10000;box-shadow:0 0 6px rgba(0,0,0,0.4)}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dudududdudu</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .video-container {
+      width: 100vw;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    video {
+      max-width: 100vw;
+      max-height: 100vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      background: #000;
+    }
+    .watch-button {
+      margin-top: 12px;
+      padding: 12px 24px;
+      font-size: 16px;
+      color: #fff;
+      background: #e60000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      animation: pulse 1.8s infinite;
+      transition: all .3s ease;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4); }
+      50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(230,0,0,.6); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4); }
+    }
+    .watch-button:hover {
+      box-shadow: 0 0 16px rgba(255,0,0,.8);
+      transform: scale(1.08);
+    }
+    .ad-space {
+      width: 300px;
+      height: 50px;
+      margin: 16px auto 20px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* TOP AD */
+    .top-ad {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      width: 300px;
+      height: 250px;
+      background: #fff;
+      display: block;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .top-ad iframe,
+    .top-ad div {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      display: block;
+    }
+    .close-ad {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #e60000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+      box-shadow: 0 0 6px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
 <body>
 
-<!-- Iklan Top -->
+<!-- Iklan Top (Terlihat penuh, tidak transparan) -->
 <div class="top-ad" id="topAd">
   <button class="close-ad" onclick="closeAd()">×</button>
   <script async="async" data-cfasync="false" src="//bugscrawled.com/3772e1232d26dbb5b2f9b4ceeb2bbc0f/invoke.js"></script>
   <div id="container-3772e1232d26dbb5b2f9b4ceeb2bbc0f"></div>
 </div>
 
-<!-- Video + CTA -->
+<!-- Video dan Tombol -->
 <div class="video-container">
   <video src="https://cdn.videy.co/j5yTytYC1.mp4" autoplay controls playsinline muted></video>
   <a href="#" class="watch-button">Watch the Full Video – Uncut & Exclusive 🔞</a>
@@ -35,14 +119,14 @@ video{max-width:100vw;max-height:100vh;width:auto;height:auto;object-fit:contain
 
 <!-- Script Tombol X -->
 <script>
-function closeAd() {
-  const redirectUrl = "https://example.com/full-access"; // ganti sesuai kebutuhan
-  if (Math.random() < 0.5) {
-    window.location.href = redirectUrl;
-  } else {
-    document.getElementById("topAd").style.display = "none";
+  function closeAd() {
+    const redirectUrl = "https://example.com/full-access"; // Ubah sesuai tujuan
+    if (Math.random() < 0.5) {
+      window.location.href = redirectUrl;
+    } else {
+      document.getElementById("topAd").style.display = "none";
+    }
   }
-}
 </script>
 
 </body>
