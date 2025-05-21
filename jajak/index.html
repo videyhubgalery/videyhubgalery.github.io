@@ -3,39 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olivia Kate ● Rasta and playing with it , She pretty too.🎀🫶🏻💌💓</title>
+  <title>TEST ● </title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f4f4f4;
-      padding: 20px;
+      padding: 0;
+      margin: 0;
     }
 
-    .video-wrapper {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
+    .video-container {
+      width: 100%;
       max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
       background: #000;
     }
 
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+    video {
       width: 100%;
-      height: 100%;
-      border: 0;
-      border-radius: 8px;
+      height: auto;
+      max-height: 100vh;
+      object-fit: contain;
+      background-color: #000;
+    }
+
+    /* Tambahan untuk video portrait: layar penuh di ponsel */
+    @media screen and (max-width: 768px) {
+      video.portrait {
+        height: 100vh;
+        width: auto;
+        object-fit: cover;
+      }
     }
 
     .watch-button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 20px auto 10px;
       padding: 12px 24px;
       font-size: 16px;
       color: #fff;
@@ -58,22 +62,23 @@
       color: #555;
     }
   </style>
-  <!-- popunder -->
 </head>
 <body>
 
-  <div class="video-wrapper">
-    <iframe src="https://cdn.videy.co/j5yTytYC1.mp4" allowfullscreen></iframe>
+  <div class="video-container">
+    <video 
+      src="https://cdn.videy.co/j5yTytYC1.mp4" 
+      autoplay 
+      controls 
+      playsinline 
+      muted 
+      class="portrait"
+    ></video>
   </div>
 
-  <!-- Tombol -->
   <a href="#" class="watch-button">Watch the Full Video – Uncut & Exclusive 🔞</a>
 
-  <!-- Space 300x50 -->
   <div class="ad-space">300x50 Ad Space</div>
-
-  <!-- native -->
 
 </body>
 </html>
-<!-- histats -->
