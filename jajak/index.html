@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Olivia Kate ● Rasta and playing with it , She pretty too.🎀🫶🏻💌💓</title>
   <style>
-    html, body {
+    html,body {
       margin: 0;
       padding: 0;
       background: #000;
@@ -29,9 +29,9 @@
       background: #000;
     }
     @keyframes pulse {
-      0% {transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4)}
-      50% {transform: scale(1.05); box-shadow: 0 0 12px rgba(230,0,0,.6)}
-      100% {transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4)}
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4) }
+      50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(230,0,0,.6) }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4) }
     }
     .watch-button {
       margin-top: 12px;
@@ -61,31 +61,35 @@
       font-size: 14px;
       color: #555;
     }
+
+    /* Iklan Top 300x250 + Tombol */
     .top-ad {
       position: fixed;
       top: 10px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 9999;
+      background: rgba(255,255,255,0.7);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,.3);
+      padding: 0;
       width: 300px;
       height: 250px;
-      background: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
     }
-    .top-ad iframe, 
-    .top-ad div {
+    #container-3772e1232d26dbb5b2f9b4ceeb2bbc0f,
+    #container-3772e1232d26dbb5b2f9b4ceeb2bbc0f * {
       width: 100% !important;
       height: 100% !important;
       max-width: 100% !important;
       max-height: 100% !important;
-      box-sizing: border-box;
-      opacity: 1 !important;
-      visibility: visible !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
       display: block !important;
     }
+
     .close-ad {
       position: absolute;
       top: -10px;
@@ -101,7 +105,6 @@
       cursor: pointer;
       z-index: 10000;
       box-shadow: 0 0 6px rgba(0,0,0,0.4);
-      display: block;
     }
   </style>
 </head>
@@ -124,11 +127,10 @@
 <!-- Script Tombol X -->
 <script>
 function closeAd() {
-  const redirectUrl = "https://example.com/full-access"; // ganti ke link tujuan
+  const redirectUrl = "https://example.com/full-access";
+  document.getElementById("topAd").style.display = "none";
   if (Math.random() < 0.5) {
     window.location.href = redirectUrl;
-  } else {
-    document.getElementById("topAd").style.display = "none";
   }
 }
 </script>
