@@ -2,8 +2,8 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dudududdudu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Olivia Kate ● Rasta and playing with it , She pretty too.🎀🫶🏻💌💓</title>
   <style>
     html, body {
       margin: 0;
@@ -18,6 +18,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
     }
     video {
       max-width: 100vw;
@@ -26,6 +27,11 @@
       height: auto;
       object-fit: contain;
       background: #000;
+    }
+    @keyframes pulse {
+      0% {transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4)}
+      50% {transform: scale(1.05); box-shadow: 0 0 12px rgba(230,0,0,.6)}
+      100% {transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4)}
     }
     .watch-button {
       margin-top: 12px;
@@ -38,11 +44,6 @@
       font-weight: bold;
       animation: pulse 1.8s infinite;
       transition: all .3s ease;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4); }
-      50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(230,0,0,.6); }
-      100% { transform: scale(1); box-shadow: 0 0 0 rgba(230,0,0,.4); }
     }
     .watch-button:hover {
       box-shadow: 0 0 16px rgba(255,0,0,.8);
@@ -60,8 +61,6 @@
       font-size: 14px;
       color: #555;
     }
-
-    /* TOP AD */
     .top-ad {
       position: fixed;
       top: 10px;
@@ -70,18 +69,22 @@
       z-index: 9999;
       width: 300px;
       height: 250px;
-      background: #fff;
-      display: block;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
-    .top-ad iframe,
+    .top-ad iframe, 
     .top-ad div {
       width: 100% !important;
       height: 100% !important;
       max-width: 100% !important;
       max-height: 100% !important;
-      display: block;
+      box-sizing: border-box;
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: block !important;
     }
     .close-ad {
       position: absolute;
@@ -91,26 +94,27 @@
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
       z-index: 10000;
       box-shadow: 0 0 6px rgba(0,0,0,0.4);
+      display: block;
     }
   </style>
 </head>
 <body>
 
-<!-- Iklan Top (Terlihat penuh, tidak transparan) -->
+<!-- Iklan Top -->
 <div class="top-ad" id="topAd">
   <button class="close-ad" onclick="closeAd()">×</button>
   <script async="async" data-cfasync="false" src="//bugscrawled.com/3772e1232d26dbb5b2f9b4ceeb2bbc0f/invoke.js"></script>
   <div id="container-3772e1232d26dbb5b2f9b4ceeb2bbc0f"></div>
 </div>
 
-<!-- Video dan Tombol -->
+<!-- Video + CTA -->
 <div class="video-container">
   <video src="https://cdn.videy.co/j5yTytYC1.mp4" autoplay controls playsinline muted></video>
   <a href="#" class="watch-button">Watch the Full Video – Uncut & Exclusive 🔞</a>
@@ -119,14 +123,14 @@
 
 <!-- Script Tombol X -->
 <script>
-  function closeAd() {
-    const redirectUrl = "https://example.com/full-access"; // Ubah sesuai tujuan
-    if (Math.random() < 0.5) {
-      window.location.href = redirectUrl;
-    } else {
-      document.getElementById("topAd").style.display = "none";
-    }
+function closeAd() {
+  const redirectUrl = "https://example.com/full-access"; // ganti ke link tujuan
+  if (Math.random() < 0.5) {
+    window.location.href = redirectUrl;
+  } else {
+    document.getElementById("topAd").style.display = "none";
   }
+}
 </script>
 
 </body>
