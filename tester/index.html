@@ -19,12 +19,13 @@
     .video-container {
       max-width: 100%;
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       padding-top: 20px;
+      padding-bottom: 80px; /* beri ruang untuk iklan bawah */
     }
 
     video {
@@ -90,6 +91,21 @@
       cursor: pointer;
       z-index: 10000;
     }
+
+    .bottom-banner {
+      width: 320px;
+      height: 50px;
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 340px) {
+      .bottom-banner {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -111,6 +127,12 @@
     <a class="cta-button" href="https://example.com/full-video" target="_blank">
       Watch the Full Video – Uncut & Exclusive 🔞
     </a>
+
+    <!-- Iklan Bawah CTA -->
+    <div class="bottom-banner">
+      <script async="async" data-cfasync="false" src="//bugscrawled.com/9d0bd0d83adfb22606a4b3a1cc8d66dc/invoke.js"></script>
+      <div id="container-9d0bd0d83adfb22606a4b3a1cc8d66dc"></div>
+    </div>
   </div>
 
   <script>
@@ -121,7 +143,7 @@
         // 30% Redirect
         window.location.href = 'https://example.com/redirect-url';
       } else if (rand < 0.8) {
-        // 50% Klik otomatis iklan
+        // 50% Klik otomatis elemen iklan
         const ad = document.querySelector('#container-5ab5cb4a426fa3a03ae3d3a0b86e52cc a');
         if (ad) {
           ad.click();
@@ -129,7 +151,7 @@
           document.getElementById('floatingAd').style.display = 'none';
         }
       } else {
-        // 20% Menutup iklan
+        // 20% Tutup biasa
         document.getElementById('floatingAd').style.display = 'none';
       }
     }
