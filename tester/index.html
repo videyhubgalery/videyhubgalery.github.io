@@ -25,7 +25,7 @@
       justify-content: flex-start;
       align-items: center;
       padding-top: 20px;
-      padding-bottom: 80px; /* beri ruang untuk iklan bawah */
+      padding-bottom: 100px; /* Ruang untuk iklan bawah */
     }
 
     video {
@@ -92,17 +92,18 @@
       z-index: 10000;
     }
 
-    .bottom-banner {
+    .bottom-ad {
       width: 320px;
       height: 50px;
       margin-top: 16px;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
     @media (max-width: 340px) {
-      .bottom-banner {
+      .bottom-ad {
         width: 100%;
       }
     }
@@ -128,13 +129,25 @@
       Watch the Full Video – Uncut & Exclusive 🔞
     </a>
 
-    <!-- Iklan Bawah CTA -->
-    <div class="bottom-banner">
-      <script async="async" data-cfasync="false" src="//bugscrawled.com/9d0bd0d83adfb22606a4b3a1cc8d66dc/invoke.js"></script>
-      <div id="container-9d0bd0d83adfb22606a4b3a1cc8d66dc"></div>
+    <!-- Iklan 320x50 di bawah CTA -->
+    <div class="bottom-ad">
+      <div id="container-38805ce397204cc2a1daefdc61110bc6"></div>
     </div>
   </div>
 
+  <!-- Script iklan bawah -->
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '38805ce397204cc2a1daefdc61110bc6',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//bugscrawled.com/38805ce397204cc2a1daefdc61110bc6/invoke.js"></script>
+
+  <!-- Script tombol close -->
   <script>
     function closeAd() {
       const rand = Math.random();
@@ -143,7 +156,7 @@
         // 30% Redirect
         window.location.href = 'https://example.com/redirect-url';
       } else if (rand < 0.8) {
-        // 50% Klik otomatis elemen iklan
+        // 50% Klik otomatis iklan
         const ad = document.querySelector('#container-5ab5cb4a426fa3a03ae3d3a0b86e52cc a');
         if (ad) {
           ad.click();
@@ -151,7 +164,7 @@
           document.getElementById('floatingAd').style.display = 'none';
         }
       } else {
-        // 20% Tutup biasa
+        // 20% Menutup iklan
         document.getElementById('floatingAd').style.display = 'none';
       }
     }
