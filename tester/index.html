@@ -16,17 +16,17 @@
       overflow-x: hidden;
     }
 
-.video-container {
-  max-width: 100%;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px; /* dari sebelumnya 100px */
-}
+    .video-container {
+      max-width: 100%;
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
 
     video {
       width: 100%;
@@ -93,20 +93,13 @@
     }
 
     .bottom-ad {
-  width: 320px;
-  height: 50px;
-  margin-top: 6px; /* dari sebelumnya 16px */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-
-    @media (max-width: 340px) {
-      .bottom-ad {
-        width: 100%;
-      }
+      width: 320px;
+      height: 50px;
+      margin-top: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
   </style>
 </head>
@@ -130,25 +123,21 @@
       Watch the Full Video – Uncut & Exclusive 🔞
     </a>
 
-    <!-- Iklan 320x50 di bawah CTA -->
+    <!-- Iklan di bawah CTA -->
     <div class="bottom-ad">
-      <div id="container-38805ce397204cc2a1daefdc61110bc6"></div>
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '38805ce397204cc2a1daefdc61110bc6',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//bugscrawled.com/38805ce397204cc2a1daefdc61110bc6/invoke.js"></script>
     </div>
   </div>
 
-  <!-- Script iklan bawah -->
-  <script type="text/javascript">
-    atOptions = {
-      'key' : '38805ce397204cc2a1daefdc61110bc6',
-      'format' : 'iframe',
-      'height' : 50,
-      'width' : 320,
-      'params' : {}
-    };
-  </script>
-  <script type="text/javascript" src="//bugscrawled.com/38805ce397204cc2a1daefdc61110bc6/invoke.js"></script>
-
-  <!-- Script tombol close -->
   <script>
     function closeAd() {
       const rand = Math.random();
