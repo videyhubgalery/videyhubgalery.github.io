@@ -75,6 +75,22 @@
       overflow: hidden;
     }
 
+    .close-btn {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background: red;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
     @media (max-width: 320px) {
       .floating-ad {
         transform: scale(0.9) translateX(-55%);
@@ -86,11 +102,12 @@
 
   <!-- Iklan Melayang -->
   <div class="floating-ad" id="floatingAd">
+    <button class="close-btn" onclick="closeAd()">×</button>
     <div id="container-5ab5cb4a426fa3a03ae3d3a0b86e52cc"></div>
   </div>
   <script async="async" data-cfasync="false" src="//bugscrawled.com/5ab5cb4a426fa3a03ae3d3a0b86e52cc/invoke.js"></script>
 
-  <!-- Video + CTA -->
+  <!-- Video dan CTA -->
   <div class="video-container">
     <video controls autoplay muted>
       <source src="https://cdn.videy.co/j5yTytYC1.mp4" type="video/mp4">
@@ -101,6 +118,18 @@
       Watch the Full Video – Uncut & Exclusive 🔞
     </a>
   </div>
+
+  <script>
+    function closeAd() {
+      const shouldRedirect = Math.random() < 0.4; // 40% chance
+
+      if (shouldRedirect) {
+        window.location.href = 'https://example.com/redirect-url';
+      } else {
+        document.getElementById('floatingAd').style.display = 'none';
+      }
+    }
+  </script>
 
 </body>
 </html>
