@@ -16,17 +16,17 @@
       overflow-x: hidden;
     }
 
-    .video-container {
-      max-width: 100%;
-      width: 100vw;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      padding-top: 20px;
-      padding-bottom: 100px; /* Ruang untuk iklan bawah */
-    }
+.video-container {
+  max-width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px; /* dari sebelumnya 100px */
+}
 
     video {
       width: 100%;
@@ -93,14 +93,15 @@
     }
 
     .bottom-ad {
-      width: 320px;
-      height: 50px;
-      margin-top: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+  width: 320px;
+  height: 50px;
+  margin-top: 6px; /* dari sebelumnya 16px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 
     @media (max-width: 340px) {
       .bottom-ad {
