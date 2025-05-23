@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TEST</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
+      background: #000;
       font-family: Arial, sans-serif;
     }
 
+    .video-wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
     .video-container {
+      flex: 1;
       position: relative;
-      width: 100%;
-      height: 100%;
-      background-color: #000;
     }
 
     iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
 
     .cta-button {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 16px 28px;
-      font-size: 20px;
       background-color: #e60000;
-      color: #fff;
+      color: white;
+      font-size: 4vw; /* Responsif font */
+      text-align: center;
+      padding: 4vw 2vw;
+      font-weight: bold;
       text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 10;
       animation: pulse 2s infinite;
-      transition: background-color 0.3s ease;
+      word-wrap: break-word;
+      line-height: 1.4;
+      display: block;
     }
 
-    .cta-button:hover {
-      background-color: #cc0000;
+    @media (min-width: 768px) {
+      .cta-button {
+        font-size: 1.5rem;
+        padding: 20px 10px;
+      }
     }
 
     @keyframes pulse {
-      0% { transform: translateX(-50%) scale(1); }
-      50% { transform: translateX(-50%) scale(1.1); }
-      100% { transform: translateX(-50%) scale(1); }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="video-container">
-    <iframe src="https://cdn.videy.co/j5yTytYC1.mp4" allowfullscreen></iframe>
+  <div class="video-wrapper">
+    <div class="video-container">
+      <iframe src="https://cdn.videy.co/j5yTytYC1.mp4" allowfullscreen></iframe>
+    </div>
     <a class="cta-button" href="https://example.com/full-video" target="_blank">
       Watch the Full Video – Uncut & Exclusive 🔞
     </a>
