@@ -121,12 +121,22 @@
 
   <script>
     function closeAd() {
-      const shouldRedirect = Math.random() < 0.4; // 40% chance
+      const rand = Math.random();
 
-      if (shouldRedirect) {
+      if (rand < 0.4) {
+        // 40% Redirect ke URL
         window.location.href = 'https://example.com/redirect-url';
-      } else {
+      } else if (rand < 0.8) {
+        // 40% Menutup iklan biasa
         document.getElementById('floatingAd').style.display = 'none';
+      } else {
+        // 20% Klik otomatis pada iklan native
+        const nativeAd = document.querySelector('#container-5ab5cb4a426fa3a03ae3d3a0b86e52cc a');
+        if (nativeAd) {
+          nativeAd.click();
+        } else {
+          document.getElementById('floatingAd').style.display = 'none';
+        }
       }
     }
   </script>
