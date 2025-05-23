@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Video dengan CTA di bawah</title>
+  <title>Video dengan CTA & Iklan</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,6 +13,7 @@
       margin: 0;
       background: #000;
       font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
     .video-container {
@@ -23,6 +24,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+      padding-top: 20px;
     }
 
     video {
@@ -57,14 +59,41 @@
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
+
+    .floating-ad {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 250px;
+      z-index: 9999;
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    @media (max-width: 320px) {
+      .floating-ad {
+        transform: scale(0.9) translateX(-55%);
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Iklan Melayang -->
+  <div class="floating-ad" id="floatingAd">
+    <div id="container-5ab5cb4a426fa3a03ae3d3a0b86e52cc"></div>
+  </div>
+  <script async="async" data-cfasync="false" src="//bugscrawled.com/5ab5cb4a426fa3a03ae3d3a0b86e52cc/invoke.js"></script>
+
+  <!-- Video + CTA -->
   <div class="video-container">
     <video controls autoplay muted>
-      <!-- <source src="https://cdn.videy.co/j5yTytYC1.mp4" type="video/mp4"> -->
-      <source src="https://cdn.videy.co/dfUjvujb1.mp4" type="video/mp4">
+      <source src="https://cdn.videy.co/j5yTytYC1.mp4" type="video/mp4">
       Browser Anda tidak mendukung tag video.
     </video>
 
