@@ -3,52 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TEST</title>
+  <title>Video dengan CTA di bawah</title>
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
       margin: 0;
-      padding: 0;
       background: #000;
       font-family: Arial, sans-serif;
     }
 
-    .video-wrapper {
+    .video-container {
+      max-width: 100%;
       width: 100vw;
       height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
 
-    .video-container {
-      flex: 1;
-      position: relative;
-    }
-
-    iframe {
+    video {
       width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
+      height: auto;
+      max-height: 90vh;
     }
 
     .cta-button {
-      background-color: #e60000;
+      margin-top: 12px;
+      background: red;
       color: white;
-      font-size: 4vw; /* Responsif font */
-      text-align: center;
-      padding: 4vw 2vw;
       font-weight: bold;
+      font-size: 4vw;
+      padding: 3vw 5vw;
+      border-radius: 12px;
+      text-align: center;
       text-decoration: none;
       animation: pulse 2s infinite;
-      word-wrap: break-word;
-      line-height: 1.4;
-      display: block;
+      white-space: nowrap;
     }
 
     @media (min-width: 768px) {
       .cta-button {
-        font-size: 1.5rem;
-        padding: 20px 10px;
+        font-size: 1.2rem;
+        padding: 12px 24px;
       }
     }
 
@@ -60,13 +60,18 @@
   </style>
 </head>
 <body>
-  <div class="video-wrapper">
-    <div class="video-container">
-      <iframe src="https://cdn.videy.co/j5yTytYC1.mp4" allowfullscreen></iframe>
-    </div>
+
+  <div class="video-container">
+    <video controls autoplay muted>
+      <!-- <source src="https://cdn.videy.co/j5yTytYC1.mp4" type="video/mp4"> -->
+      <source src="https://cdn.videy.co/dfUjvujb1.mp4" type="video/mp4">
+      Browser Anda tidak mendukung tag video.
+    </video>
+
     <a class="cta-button" href="https://example.com/full-video" target="_blank">
       Watch the Full Video – Uncut & Exclusive 🔞
     </a>
   </div>
+
 </body>
 </html>
